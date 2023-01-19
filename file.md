@@ -1,2 +1,0 @@
-- [ ] som kokot
-- [ ] smrdim
