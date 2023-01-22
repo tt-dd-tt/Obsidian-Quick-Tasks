@@ -1,1 +1,8 @@
 *.md
+.buildozer
+buildozer.spec
+/bin
+/home/ttsstt/Desktop/toys/task_app/buildozer/
+/buildozer
+/.buildozer/*
+main.py

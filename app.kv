@@ -1,0 +1,20 @@
+<MyApp>:
+    FloatLayout:
+        TextInput:
+            id: text_input
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint: (0.8, 0.1)
+            font_size: 20
+            halign: 'center'
+        Button:
+            text: "Confirm"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            size_hint: (0.3, 0.1)
+            on_release: app.write_to_file(self)
+        
+        Label:
+            id: label
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint: (0.8, 0.1)
+            font_size: 20
+            halign: 'center'
