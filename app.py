@@ -19,7 +19,7 @@ class MyApp(App):
         if input_text == "":
             self.text_input.text = "You didn't write anything!"
             return
-        markdown_file = open("file.md", "a")
+        markdown_file = open("task_app.md", "a")
         markdown_file.write("- [ ] " + input_text + "\n")
         markdown_file.close()
         self.text_input.text = ""
