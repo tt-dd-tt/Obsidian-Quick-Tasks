@@ -6,3 +6,10 @@ buildozer.spec
 /buildozer
 /.buildozer/*
 main.py
+<<<<<<< Updated upstream
+=======
+.buildozer
+/buildozer/*
+*.spec
+
+>>>>>>> Stashed changes
