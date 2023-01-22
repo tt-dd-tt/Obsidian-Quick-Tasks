@@ -15,10 +15,14 @@ class MyApp(App):
 
     def write_to_file(self, instance):
         input_text = self.text_input.text
+        lines = input_text.split("\n")
         markdown_file = open("tasks_app.md", "a")
-        markdown_file.write("- [ ] " + input_text + "\n")
+        for line in lines:
+            markdown_file.write("- [ ] " + line + "\n")
         markdown_file.close()
         self.text_input.text = ""
+
+
 
 
 if __name__ == "__main__":
