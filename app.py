@@ -13,12 +13,28 @@ class MyApp(App):
         self.layout.add_widget(self.button)
         return self.layout
 
+
+    # create function FileChooser to find file path and save that path to a variable used by function write_to_file to open file
+    def file_chooser(self):
+        file_chooser = FileChooser()
+        file_chooser.open()
+        file_path = file_chooser.path
+        return file_path
+
+    
+
     def write_to_file(self, instance):
         input_text = self.text_input.text
-        markdown_file = open("file.md", "a")
+        file_path = self.file_chooser()
+        if not file_path:
+            return None
+        markdown_file = open(file_path, "a")
         markdown_file.write("- [ ] " + input_text + "\n")
         markdown_file.close()
         self.text_input.text = ""
+
+
+
 if __name__ == "__main__":
     MyApp().run()
 
