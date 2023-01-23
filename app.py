@@ -2,6 +2,7 @@ from kivy.app import App
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
+import os
 
 class MyApp(App):
     def build(self):
@@ -19,6 +20,9 @@ class MyApp(App):
         markdown_file.write("- [ ] " + input_text + "\n")
         markdown_file.close()
         self.text_input.text = ""
+
+
+    
 
 
 if __name__ == "__main__":
